@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="text-center mt-4 name">
+        Login to your account
+    </div>
+    <form class="p-3 mt-1">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="userName" class="form-control" id="userName" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" class="form-control" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3" [routerLink]="['/priceList']">Sign In</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>

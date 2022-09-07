@@ -1,0 +1,245 @@
+<div class="container-fluid">
+  <div class="accordion" id="searchAccordion">
+    <div class="accordion-item m-3">
+      <h3 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          <i class="bi bi-list px-2"></i> Price List
+        </button>
+      </h3>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+      >
+        <div class="accordion-body">
+          <div class="row g-2">
+            <div class="col-md">
+              <div class="row form-group">
+                <div class="col-4">
+                  <label for="exampleInputEmail1" class="p-2"
+                    >Organisation</label
+                  >
+                </div>
+                <div class="col-8">
+                  <select
+                    class="form-select form-select-sm"
+                    multiple
+                    aria-label="multiple select example"
+                  >
+                    <option value="1">All</option>
+                    <option value="2">Albania_CB</option>
+                    <option value="3">Algeria_CB</option>
+                    <option value="1">Andorra_CB</option>
+                    <option value="2">Angola_CB</option>
+                    <option value="3">Argentina_CB</option>
+                    <option value="1">Armenia_CB</option>
+                    <option value="2">Australia_CB</option>
+                    <option value="3">Three_CB</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-4">
+                  <button class="btn btn-primary btn-sm mt-1">Select</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="row form-group">
+                <div class="col-4">
+                  <label for="exampleInputEmail1" class="p-2"
+                    >Local Product Name</label
+                  >
+                </div>
+                <div class="col-8">
+                  <select
+                    class="form-select form-select-sm"
+                    multiple
+                    aria-label="multiple select example"
+                  >
+                    <option value="1">BRIVIACT</option>
+                    <option value="2">KEPPRA</option>
+                    <option value="1">BRIVLERA</option>
+                    <option value="2">BRIVIACT</option>
+                    <option value="1">BRIVIACT</option>
+                    <option value="2">KEPPRA</option>
+                    <option value="1">BRIVLERA</option>
+                    <option value="2">BRIVIACT</option>
+                    <option value="1">BRIVIACT</option>
+                    <option value="2">KEPPRA</option>
+                    <option value="1">BRIVLERA</option>
+                    <option value="2">BRIVIACT</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-3">
+                  <button class="btn btn-primary btn-sm mt-1">Select</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-2 mt-3">
+            <div class="col-md">
+              <div class="row form-group">
+                <div class="col-4">
+                  <label for="exampleInputEmail1" class="p-2">Country</label>
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="inputPassword"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="row form-group">
+                <div class="col-4">
+                  <label for="exampleInputEmail1" class="p-2"
+                    >Global Brand Name</label
+                  >
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="inputPassword"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-2 mt-3">
+            <div class="col-md">
+              <div class="row form-group">
+                <div class="col-4">
+                  <label for="exampleInputEmail1" class="p-2"
+                    >Price List Name</label
+                  >
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="inputPassword"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="row form-group">
+                <div class="col-4">
+                  <label for="exampleInputEmail1" class="p-2"
+                    >Molecule Name</label
+                  >
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="inputPassword"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="bg-light right-float mt-2">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm mx-2"
+                  (click)="search()"
+                  [disabled]="loading"
+                >
+                  <span
+                    *ngIf="loading"
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  <!-- <span>Search</span> -->
+                  <span *ngIf="loading" class="ms-1">Searching...</span>
+                  <span *ngIf="!loading">Search</span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-light btn-sm mx-2"
+                  (click)="showResults = false"
+                >
+                  Reset
+                </button>
+                <button type="button" class="btn btn-light btn-sm mx-2">
+                  Save Search
+                </button>
+                <button type="button" class="btn btn-success btn-sm mx-2">
+                  Export Excel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item m-3" *ngIf="showResults">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="true"
+          aria-controls="collapseTwo"
+        >
+          <i class="bi bi-list px-2"></i> Price List
+        </button>
+      </h2>
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col">
+            <span><i class="bi bi-list mx-2"></i>Product Info View</span>
+            <div class="bg-light right-float pb-1">
+              <input
+                class="form-control form-control-sm"
+                type="text"
+                (keyup)="onChangeEvent($event)"
+                placeholder="Search"
+                aria-label=".form-control-sm example"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingTwo"
+        >
+          <ag-grid-angular
+            style="width: 100%; height: 200px"
+            class="ag-theme-balham"
+            [rowData]="rowData"
+            [columnDefs]="columnDefs"
+            (gridReady)="onGridReady($event)"
+          >
+          </ag-grid-angular>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

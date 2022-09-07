@@ -1,0 +1,287 @@
+<div class="text-center" *ngIf="loading">
+  <div class="spinner-border text-danger loader" role="status"></div>
+</div>
+<div class="accordion" id="searchAccordion" *ngIf="!loading">
+  <div class="accordion-item m-3">
+    <h3 class="accordion-header" id="headingOne">
+      <button
+        class="accordion-button text-white"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        <i class="bi bi-list px-2"></i> Price List - Belgium CB_UIT-12121
+      </button>
+    </h3>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse show"
+      aria-labelledby="headingOne"
+    >
+      <div class="accordion-body">
+        <!-- <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col">
+              <input
+              type="text"
+              disabled
+              class="form-control form-control-sm"
+              id="inputPassword"
+            />
+            </div>
+          </div> -->
+        <div class="row g-2">
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="text-right"
+                  >List Type</label
+                >
+              </div>
+              <div class="col-8">
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Organisation</label>
+              </div>
+              <div class="col-8">
+                <select
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <!-- <div class="row">
+                <div class="offset-4">
+                  <button class="btn btn-primary btn-sm mt-1">Select</button>
+                </div>
+              </div> -->
+          </div>
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Price List Name</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                  value="BELGIUM_EUR"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2 mt-3">
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Region</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                  value="India"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Price Lsit ID</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                  value="UC85589"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Currency</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2 mt-3">
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Validity</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Status</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                  value="OPEN"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="row form-group">
+              <div class="col-4 text-end">
+                <label for="exampleInputEmail1" class="">Version</label>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control form-control-sm"
+                  id="inputPassword"
+                  value="1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="bg-light right-float mt-2">
+              <button
+                type="button"
+                class="btn btn-primary btn-sm mx-2"
+                (click)="showResults = true"
+              >
+                Search
+              </button>
+              <button
+                type="button"
+                class="btn btn-light btn-sm mx-2"
+                (click)="showResults = false"
+              >
+                Reset
+              </button>
+              <button type="button" class="btn btn-light btn-sm mx-2">
+                Save Search
+              </button>
+              <button type="button" class="btn btn-success btn-sm mx-2">
+                Export Excel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item m-3">
+    <h2 class="accordion-header" id="headingTwo">
+      <button
+        class="accordion-button text-white"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="true"
+        aria-controls="collapseTwo"
+      >
+        <i class="bi bi-house-fill mx-1"></i>Price List Product Details
+      </button>
+    </h2>
+    <div
+      id="collapseTwo"
+      class="accordion-collapse collapse show"
+      aria-labelledby="headingTwo"
+    >
+      <div class="accordion-body">
+        <div class="row mb-2">
+          <div class="col">
+            <div>
+              <button type="button" class="btn btn-light btn-sm mr-2">
+                Add Product
+              </button>
+              <button type="button" class="btn btn-light btn-sm mx-2">
+                Import
+              </button>
+              <button type="button" class="btn btn-light btn-sm mx-2">
+                Download For Import
+              </button>
+
+              <input
+                class="form-check-input mx-1"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Include Historical Prices
+              </label>
+
+              <input
+                class="form-check-input ms-3 mx-1"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Only Deactivated Lines
+              </label>
+            </div>
+          </div>
+        </div>
+        <ag-grid-angular
+          style="width: 100%; height: 200px"
+          class="ag-theme-balham"
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          [rowHeight]="40"
+        >
+        </ag-grid-angular>
+      </div>
+    </div>
+  </div>
+</div>

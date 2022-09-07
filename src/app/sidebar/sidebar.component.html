@@ -1,0 +1,69 @@
+<div class="sidebar flex-shrink-0 p-3 text-white" [ngClass]="{'my_class': currentPage == '/'}">
+  <ul class="list-unstyled ps-0" *ngIf="currentPage!='/'">
+    <li class="mb-1 text-light">
+      <button
+        class="btn btn-toggle align-items-center rounded collapsed text-white"
+        data-bs-toggle="collapse"
+        data-bs-target="#home-collapse"
+        aria-expanded="true"
+      >
+        Pricing Catalog
+      </button>
+      <div class="collapse show" id="home-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+          <li>
+            <a href="#" class="link-dark rounded text-white"
+              >Price List Search</a
+            >
+          </li>
+          <li>
+            <a href="#" class="link-dark rounded text-white"
+              >Price List Statistics</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="mb-1">
+      <button
+        class="btn btn-toggle align-items-center rounded collapsed text-white"
+        data-bs-toggle="collapse"
+        data-bs-target="#dashboard-collapse"
+        aria-expanded="false"
+      >
+        Saved Search
+      </button>
+      <div class="collapse" id="dashboard-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-2">
+          <li><a href="#" class="link-dark rounded text-white">Overview</a></li>
+          <li><a href="#" class="link-dark rounded text-white">Weekly</a></li>
+          <li><a href="#" class="link-dark rounded text-white">Monthly</a></li>
+          <li><a href="#" class="link-dark rounded text-white">Annually</a></li>
+        </ul>
+      </div>
+    </li>
+    </ul>
+    <ul class="list-unstyled ps-0" *ngIf="currentPage=='/'">
+      <li class="mb-1 text-light my-1">
+        <i class="bi bi-unlock-fill"></i>
+        <a href="#" class="link-dark rounded text-white m-2"> Login</a>
+        
+        </li>
+        <li class="mb-1 text-light my-1">
+          <i class="bi bi-laptop-fill"></i>
+          <a href="#" class="link-dark rounded text-white m-2">
+            Sign Up
+          </a>
+          
+          </li>
+      
+      <li class="mb-1 text-light my-1">
+        <i class="bi bi-arrow-bar-right"></i>
+        <a href="#" class="link-dark rounded text-white m-2">
+          Forgot Password
+
+        </a>
+        </li>
+      </ul>
+ 
+</div>
